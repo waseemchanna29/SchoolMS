@@ -12,8 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('campuses', function (Blueprint $table) {
-            $table->id();
+           $table->id();
+            $table->string('name');
+            $table->string('slug')->unique();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
+            $table->text('address')->nullable();
+            $table->string('city')->nullable();
+            $table->string('logo')->nullable();
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -1,18 +1,154 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'],
+            input: [
+                'resources/scss/app.scss',
+                'resources/js/app.js',
+                'resources/js/maps/leaflet-data.js',
+                'resources/js/pages/apps-api-keys.js',
+                'resources/js/pages/apps-blog-grid.js',
+                'resources/js/pages/apps-calendar.js',
+                'resources/js/pages/apps-chat.js',
+                'resources/js/pages/apps-create-invoice.js',
+                'resources/js/pages/apps-crm-pipeline.js',
+                'resources/js/pages/apps-email-compose.js',
+                'resources/js/pages/apps-email.js',
+                'resources/js/pages/apps-kanban.js',
+                'resources/js/pages/apps-todo.js',
+                'resources/js/pages/auth-password.js',
+                'resources/js/pages/auth-two-factor.js',
+                'resources/js/pages/bootstrap-table.js',
+                'resources/js/pages/chart-apex-area.js',
+                'resources/js/pages/chart-apex-bar.js',
+                'resources/js/pages/chart-apex-boxplot.js',
+                'resources/js/pages/chart-apex-bubble.js',
+                'resources/js/pages/chart-apex-candlestick.js',
+                'resources/js/pages/chart-apex-column.js',
+                'resources/js/pages/chart-apex-funnel.js',
+                'resources/js/pages/chart-apex-heatmap.js',
+                'resources/js/pages/chart-apex-line.js',
+                'resources/js/pages/chart-apex-mixed.js',
+                'resources/js/pages/chart-apex-pie.js',
+                'resources/js/pages/chart-apex-polar-area.js',
+                'resources/js/pages/chart-apex-radar.js',
+                'resources/js/pages/chart-apex-radialbar.js',
+                'resources/js/pages/chart-apex-range.js',
+                'resources/js/pages/chart-apex-scatter.js',
+                'resources/js/pages/chart-apex-slope.js',
+                'resources/js/pages/chart-apex-sparklines.js',
+                'resources/js/pages/chart-apex-timeline.js',
+                'resources/js/pages/chart-apex-treemap.js',
+                'resources/js/pages/chart-echart-area.js',
+                'resources/js/pages/chart-echart-bar.js',
+                'resources/js/pages/chart-echart-candlestick.js',
+                'resources/js/pages/chart-echart-gauge.js',
+                'resources/js/pages/chart-echart-geo-map.js',
+                'resources/js/pages/chart-echart-heatmap.js',
+                'resources/js/pages/chart-echart-line.js',
+                'resources/js/pages/chart-echart-other.js',
+                'resources/js/pages/chart-echart-pie.js',
+                'resources/js/pages/chart-echart-radar.js',
+                'resources/js/pages/chart-echart-scatter.js',
+                'resources/js/pages/chartjs-area.js',
+                'resources/js/pages/chartjs-bar.js',
+                'resources/js/pages/chartjs-line.js',
+                'resources/js/pages/chartjs-other.js',
+                'resources/js/pages/coming-soon.js',
+                'resources/js/pages/custom-table.js',
+                'resources/js/pages/dashboard-analytics.js',
+                'resources/js/pages/dashboard-crm.js',
+                'resources/js/pages/dashboard-ecommerce.js',
+                'resources/js/pages/dashboard-finance.js',
+                'resources/js/pages/dashboard-projects.js',
+                'resources/js/pages/datatables-ajax.js',
+                'resources/js/pages/datatables-basic.js',
+                'resources/js/pages/datatables-checkbox-select.js',
+                'resources/js/pages/datatables-child-rows.js',
+                'resources/js/pages/datatables-column-search.js',
+                'resources/js/pages/datatables-export-data.js',
+                'resources/js/pages/datatables-fixed-columns.js',
+                'resources/js/pages/datatables-fixed-header.js',
+                'resources/js/pages/datatables-javascript-source.js',
+                'resources/js/pages/datatables-range-search.js',
+                'resources/js/pages/datatables-rendering.js',
+                'resources/js/pages/datatables-rows-add.js',
+                'resources/js/pages/datatables-scroll.js',
+                'resources/js/pages/datatables-select.js',
+                'resources/js/pages/datatables-show-hide-columns.js',
+                'resources/js/pages/ecommerce-product-add.js',
+                'resources/js/pages/ecommerce-product-views.js',
+                'resources/js/pages/ecommerce-products.js',
+                'resources/js/pages/ecommerce-reviews.js',
+                'resources/js/pages/ecommerce-sales.js',
+                'resources/js/pages/ecommerce-seller-details.js',
+                'resources/js/pages/flags-listing.js',
+                'resources/js/pages/form-choice.js',
+                'resources/js/pages/form-colorpickr.js',
+                'resources/js/pages/form-date-range-picker.js',
+                'resources/js/pages/form-elements.js',
+                'resources/js/pages/form-fileupload.js',
+                'resources/js/pages/form-image-cropper.js',
+                'resources/js/pages/form-inputmask.js',
+                'resources/js/pages/form-quilljs.js',
+                'resources/js/pages/form-range-slider.js',
+                'resources/js/pages/form-select2.js',
+                'resources/js/pages/form-typehead.js',
+                'resources/js/pages/form-wizard.js',
+                'resources/js/pages/maps-leaflet.js',
+                'resources/js/pages/maps-vector.js',
+                'resources/js/pages/pages-gallery.js',
+                'resources/js/pages/plugins-animation.js',
+                'resources/js/pages/plugins-clipboard.js',
+                'resources/js/pages/plugins-idle-timer.js',
+                'resources/js/pages/plugins-masonry.js',
+                'resources/js/pages/plugins-nestable.js',
+                'resources/js/pages/plugins-pass-meter.js',
+                'resources/js/pages/plugins-pdf-viewer.js',
+                'resources/js/pages/plugins-plyr.js',
+                'resources/js/pages/plugins-sweetalerts.js',
+                'resources/js/pages/plugins-tour.js',
+                'resources/js/pages/plugins-treeview.js',
+                'resources/js/pages/ui-alerts.js',
+                'resources/js/pages/ui-modals.js',
+                'resources/js/pages/ui-notifications.js',
+                'resources/js/pages/widgets-charts.js',
+                'resources/js/vendor.js'
+            ],
+
             refresh: true,
         }),
-        tailwindcss(),
     ],
-    server: {
-        watch: {
-            ignored: ['**/storage/framework/views/**'],
+    css: {
+        preprocessorOptions: {
+            scss: {
+                silenceDeprecations: ['import', 'global-builtin', 'color-functions', 'if-function'],
+                loadPaths: ['node_modules'],  // 👈 Add this
+            }
         },
+        postcss: {
+            plugins: [
+                // Strips @charset rules from all CSS files before PostCSS processes them
+                {
+                    postcssPlugin: 'remove-charset',
+                    prepare() {
+                        return {
+                            AtRule: {
+                                charset(atRule) {
+                                    atRule.remove()
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
     },
+    resolve: {
+        alias: {
+            '~': '/node_modules',  // 👈 Add this
+        }
+    }
 });
