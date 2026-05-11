@@ -1,4 +1,7 @@
-@extends('layouts.app')
+@extends('shared.base', ['title' => 'Admin Dashboard'])
+
+@section('styles')
+@endsection
 
 @section('content')
 <div class="px-4 container-fluid">

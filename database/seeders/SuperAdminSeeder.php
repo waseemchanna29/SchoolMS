@@ -21,5 +21,6 @@ class SuperAdminSeeder extends Seeder
         );
 
         $superAdmin->assignRole('super_admin');
+        
     }
 }
